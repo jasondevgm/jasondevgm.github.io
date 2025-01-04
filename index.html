@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Steven Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Hi! I'm Jason Steven, a <strong id="profession">Full Stack Developer</strong> Based in Barcelona</h1>
+            <img src="images/barcelona.png" alt="Barcelona city">
+            <a id="touch" href="#contact">Let's get in touch <img class="arrow" src="images/arrow1.svg" alt="arrow"></a>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="bento-layout">
+                <div class="bento-item">
+                    <h3>Skill 1</h3>
+                    <p>Description</p>
+                </div>
+                <div class="bento-item">
+                    <h3>Skill 2</h3>
+                    <p>Description</p>
+                </div>
+                <div class="bento-item">
+                    <h3>Skill 3</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>My Work</h2>
+            <div class="project">
+                <h3>Project Title</h3>
+                <p>Description of the project, tools used, and outcomes achieved.</p>
+                <img src="images/sagradaFamilia.svg" alt="Project Screenshot">
+            </div>
+            <div class="project">
+                <h3>Project Title</h3>
+                <p>Description of the project, tools used, and outcomes achieved.</p>
+                <img src="images/sagradaFamilia.svg" alt="Project Screenshot">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jason Steven. Contact: <a href="mailto:jasondevgm@gmail.com"> jasondevgm</a></p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
