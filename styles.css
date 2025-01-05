@@ -16,12 +16,27 @@
     --card-border-color: #e1e4e8;
 }
 
+#background-video {
+    filter: hue-rotate(255deg) brightness(0.4);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background: url("videos/background.mp4");
+    background-size: cover;
+    color: white;
 }
 
 h1 {
@@ -36,13 +51,19 @@ p {
     font-size: 1rem;
 }
 
+header {
+    position: absolute;
+    width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 1rem;
 }
 
-nav ul {
+#nav-btns {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -50,14 +71,7 @@ nav ul {
     padding: 0;
 }
 
-.first-a-tag{
-    padding-left: 40px;
-}
-.last-a-tag{
-    padding-right: 40px;
-}
-
-nav ul li a {
+#nav-btns a {
     display: flex;
     text-decoration: none;
     color: #ffffff;
@@ -66,9 +80,55 @@ nav ul li a {
     transition: transform 0.2s;
 }
 
-nav ul li a:hover {
+#nav-btns a:hover {
     color: #dcdcdc;
     text-align: center;
+    text-decoration: none;
+    transform: scale(1.10);
+}
+
+.projects-btn {
+    padding-left: 40px !important;
+}
+
+.contact-btn {
+    padding-right: 40px !important;
+}
+
+#language-btns {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+#language-btn-1{
+    display: none;
+    padding: 5px;
+    order: 1;
+}
+#language-btn-2{
+    display: none;
+    padding: 5px;
+    order: 2;
+}
+#language-btn-3{
+    display: none;
+    padding: 5px;
+    order: 3;
+}
+#language-btns img{
+    width: 30px;
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.2s;
+}
+
+#language-btns img:hover {
     text-decoration: none;
     transform: scale(1.10);
 }
@@ -100,48 +160,49 @@ nav ul li a:hover {
     }
 }
 
-section {
-    height: 100vh;
+main {
+    color: #000000;
     padding: 0 2rem;
     text-align: center;
 }
 
-#profession {
-    color: var(--text-empha-color);
+#about {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about h1 {
+    color: white;
+    margin-top: 150px;
+}
+
+#about span {
+    color: yellow;
     font-weight: 900;
 }
 
-#location {
-    margin: 20px;
+#about #barna-landscape {
+    max-width: 100vh;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-#about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 80vh;
-}
-#about img {
-    max-width: 80ch;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add box shadow */
+#touch-btn {
+    bottom: 40px;
+    padding: 10px 30px;
 }
 
-
-.arrow {
+#touch-btn img {
     filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
 
-#skills {
-    color: #e0e0e4;
-}
+
 
 #skills ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 16px;
-    padding: 0;
-    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 #skills li {
@@ -181,7 +242,7 @@ section {
 }
 
 .project img {
-    max-width: 100%;
+    max-width: 40px;
     border-radius: 8px;
 }
 
@@ -275,8 +336,8 @@ button:hover {
 
 .border-animation {
     animation: 2s linear 0s infinite normal none running spin;
-    background: linear-gradient(to bottom, oklch(0.1 0.2 240 / 0.95), oklch(0.1 0.2 240 / 0.95)) padding-box,
-    conic-gradient(from var(--bg-angle) in oklch longer hue, oklch(0.85 0.37 0) 0 0) border-box;
+    background: linear-gradient(to bottom, oklch(0 0.2 240 / 2), oklch(0 0.2 240 / 2)) padding-box,
+        conic-gradient(from var(--bg-angle) in oklch longer hue, oklch(0.85 0.37 0) 0 0) border-box;
     box-shadow: oklch(0.1 0.37 315 / 0.25) 0.1rem 0.2rem 0.2rem 0.2rem;
     color: white;
     text-align: center;
