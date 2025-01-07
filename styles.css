@@ -1,5 +1,5 @@
 :root {
-    --background-color: #f6f8fa;
+    --background-color: #dae0e6;
     --text-color: #000000;
     --text-empha-color: #14048b;
     --nav-background-color: rgba(31, 33, 94, 0.75);
@@ -11,14 +11,18 @@
     --button-hover-background-color: #218838;
     --button-text-color: #ffffff;
     --footer-background-color: #24292e;
-    --footer-text-color: #ffffff;
+    --footer-text-color: #d4d4d4;
     --card-background-color: #ffffff;
     --card-border-color: #e1e4e8;
 }
 
 #background-video {
-    filter: hue-rotate(255deg) brightness(0.4);
-    position: absolute;
+    filter: grayscale(30%) hue-rotate(255deg) brightness(0.4);
+    position: fixed;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -45,6 +49,11 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--footer-text-color);
 }
 
 p {
@@ -87,6 +96,14 @@ nav {
     transform: scale(1.10);
 }
 
+main {
+    text-align: center;
+}
+
+section {
+    margin-top: 20px;
+}
+
 .projects-btn {
     padding-left: 40px !important;
 }
@@ -105,22 +122,26 @@ nav {
     padding: 0px;
     margin: 0;
 }
-#language-btn-1{
+
+#language-btn-1 {
     display: none;
     padding: 5px;
     order: 1;
 }
-#language-btn-2{
+
+#language-btn-2 {
     display: none;
     padding: 5px;
     order: 2;
 }
-#language-btn-3{
+
+#language-btn-3 {
     display: none;
     padding: 5px;
     order: 3;
 }
-#language-btns img{
+
+#language-btns img {
     width: 30px;
     display: flex;
     text-decoration: none;
@@ -160,80 +181,59 @@ nav {
     }
 }
 
-main {
-    color: #000000;
-    padding: 0 2rem;
-    text-align: center;
-}
 
 #about {
     display: flex;
-    height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
     align-items: center;
 }
 
 #about h1 {
     color: white;
-    margin-top: 150px;
+    padding-top: 150px;
+    font-size: 4rem;
+    max-width: 80%;
 }
 
 #about span {
-    color: yellow;
+    color: rgb(139, 137, 216);
     font-weight: 900;
 }
 
-#about #barna-landscape {
-    max-width: 100vh;
-    border: 1px solid transparent;
-    box-shadow: 0 8px 2px -2px rgba(0, 0, 0, 0.2);
+#touch-btn {
+    padding: 10px 30px;
+    margin-top: 60px;
+    transition: transform 0.2s;
 }
 
-#touch-btn {
-    bottom: 40px;
-    padding: 10px 30px;
+#touch-btn:hover {
+    transform: scale(1.05);
 }
 
 #touch-btn img {
     filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
 
-
-
-#skills ul {
+#projects {
     display: flex;
-    gap: 20px;
-}
-
-#skills li {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-#skills li:hover {
-    transform: scale(1.05);
-}
-
-#work .project {
-    margin: 2rem auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .project {
+    display: flex;
+    backdrop-filter: blur(20px);
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin: 16px 0;
-    background-color: #fff;
     transition: transform 0.2s;
 }
 
@@ -242,8 +242,42 @@ main {
 }
 
 .project img {
-    max-width: 40px;
+    width: 100px;
     border-radius: 8px;
+}
+
+#skills{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#skills ul {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#skills li {
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    list-style: none;
+    transition: transform 0.2s;
+}
+
+#skills li:hover {
+    transform: scale(1.05);
+}
+
+.bento-item {
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    padding: 16px;
 }
 
 @media (min-width: 600px) {
@@ -258,8 +292,15 @@ main {
     }
 }
 
+#contact{
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: white;
+}
 #contact form {
     max-width: 600px;
+    padding: 50px 100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -274,24 +315,16 @@ main {
 #contact form textarea,
 #contact form button {
     padding: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 footer {
-    background-color: var(--footer-background-color);
-    color: var(--footer-text-color);
+    font-weight: 700;
     padding: 1rem;
     text-align: center;
-}
-
-a {
-    color: var(--link-color);
-}
-
-a:hover {
-    color: var(--link-hover-color);
+    backdrop-filter: blur(20px);
 }
 
 button {
@@ -305,22 +338,6 @@ button {
 button:hover {
     background-color: var(--button-hover-background-color);
 }
-
-.bento-layout {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.bento-item {
-    background-color: var(--card-background-color);
-    border: 1px solid var(--card-border-color);
-    padding: 16px;
-    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 8px 24px rgba(27, 31, 35, 0.12);
-    flex: 1 1 calc(33.333% - 16px);
-    box-sizing: border-box;
-}
-
 
 @property --bg-angle {
     inherits: false;
