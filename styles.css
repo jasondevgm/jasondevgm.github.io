@@ -30,7 +30,6 @@
     width: auto;
     height: auto;
     z-index: -1;
-    background-size: cover;
     overflow: hidden;
 }
 
@@ -41,6 +40,12 @@ body {
     background: url("videos/background.mp4");
     background-size: cover;
     color: white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 h1 {
@@ -62,10 +67,12 @@ p {
 
 header {
     position: absolute;
+    z-index: 1;
     width: 100%;
 }
 
 nav {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,11 +104,16 @@ nav {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    backdrop-filter: blur(4px);
 }
 
 section {
     margin-top: 20px;
+    
 }
 
 .projects-btn {
@@ -203,7 +215,7 @@ section {
 
 #touch-btn {
     padding: 10px 30px;
-    margin-top: 60px;
+
     transition: transform 0.2s;
 }
 
@@ -212,7 +224,8 @@ section {
 }
 
 #touch-btn img {
-    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    height: 20px;
+    filter: invert(99%) sepia(7%) saturate(202%) hue-rotate(208deg) brightness(115%) contrast(100%);
 }
 
 #projects {
@@ -227,6 +240,7 @@ section {
     display: flex;
     backdrop-filter: blur(20px);
     width: 80%;
+    cursor: pointer;
     flex-direction: row;
     justify-content: space-evenly;
     border: 1px solid #ddd;
@@ -246,7 +260,7 @@ section {
     border-radius: 8px;
 }
 
-#skills{
+#skills {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -267,6 +281,7 @@ section {
     backdrop-filter: blur(20px);
     border-radius: 8px;
     list-style: none;
+    cursor: crosshair;
     transition: transform 0.2s;
 }
 
@@ -292,23 +307,39 @@ section {
     }
 }
 
-#contact{
-    color: #000000;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: white;
-}
-#contact form {
-    max-width: 600px;
-    padding: 50px 100px;
-    margin: 0 auto;
+#contact {
+    width: 60%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#contact form label {
-    margin-top: 1rem;
-    text-align: left;
+#contact div {
+    background: url(images/star-rain.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 2px;
+    min-width: 100%;
+
+}
+
+#contact form {
+    border-radius: 20px;
+    display: flex;
+    backdrop-filter: blur(50px);
+    padding: 40px 40px;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#form-inner {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 #contact form input,
@@ -317,26 +348,27 @@ section {
     padding: 0.5rem;
     margin-top: 1rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
+}
+
+#contact button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    font-size: 2rem;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: var(--button-hover-background-color);
 }
 
 footer {
     font-weight: 700;
     padding: 1rem;
     text-align: center;
-    backdrop-filter: blur(20px);
-}
 
-button {
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--button-hover-background-color);
 }
 
 @property --bg-angle {
