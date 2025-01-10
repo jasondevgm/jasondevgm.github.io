@@ -11,80 +11,79 @@
 
 <body>
     <video autoplay muted loop id="background-video">
-        <source src="videos/wallBackground.mp4" type="video/mp4">
+        <source src="videos/main_background.mp4" type="video/mp4">
     </video>
     <header>
         <nav>
             <ul id="nav-btns" class="border-animation">
-                <li><a class="projects-btn" href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a class="contact-btn" href="#contact">Contact</a></li>
+                <li><a id="pro-txt" class="projects-btn" href="#projects">Projects</a></li>
+                <li><a id="skl-txt" href="#skills">Skills</a></li>
+                <li><a id="cont-txt" class="contact-btn" href="#contact">Contact</a></li>
             </ul>
-            <ul id="language-btns">
-                <li id="language-btn-1"><img src="images/gb.webp" alt=""></li>
-                <li id="language-btn-2"><img src="images/es.webp" alt=""></li>
-                <li id="language-btn-3"><img src="images/cat.webp" alt=""></li>
-            </ul>
+            <div class="tab-container">
+                <div class="tab-button">
+                    <img id="btn-curr-lang" src="images/flags/en.webp" alt="lang">
+                </div>
+                <div class="tab-languages">
+                    <button id="language-button-en" class="language-btn" onclick="changeLanguage('en')">
+                        <img class="language-img" src="images/flags/en.webp" alt="english-flag">
+                    </button>
+                    <button id="language-button-es" class="language-btn" onclick="changeLanguage('es')">
+                        <img class="language-img" src="images/flags/es.webp" alt="spanish-flag">
+                    </button>
+                    <button id="language-button-cat" class="language-btn" onclick="changeLanguage('cat')">
+                        <img class="language-img" src="images/flags/cat.webp" alt="catalonian-flag">
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="about">
-            <h1>Hi! I'm Jason Steven,<span><br>a Full Stack Developer <br></span> by the way I live in Barcelona.</h1>
+            <h1>Hi! I'm Jason Steven,<span><br id="rol-txt">a Full Stack Developer <br></span> by the way I live in
+                Barcelona.</h1>
             <a id="touch-btn" class="border-animation" href="#contact">Let's get in touch <img class="arrow"
-                    src="images/arrow.svg" alt="arrow"></a>
+                    src="images/icons/arrow.svg" alt="arrow"></a>
         </section>
         <section id="projects">
             <h2>Some projects I've worked on</h2>
-            <div class="project">
-                <h3>Project Title</h3>
-                <p>Description of the project, tools used, and outcomes achieved.</p>
-                <img src="images/sagradaFamilia.svg" alt="Project Screenshot">
-            </div>
-            <div class="project">
-                <img src="images/sagradaFamilia.svg" alt="Project Screenshot">
-                <p>Description of the project, tools used, and outcomes achieved.</p>
-                <h3>Project Title</h3>
-            </div>
-            <div class="project">
-                <h3>Project Title</h3>
-                <p>Description of the project, tools used, and outcomes achieved.</p>
-                <img src="images/sagradaFamilia.svg" alt="Project Screenshot">
+            <div id="projects-container">
             </div>
         </section>
         <section id="skills">
             <h2>Skills</h2>
             <ul class="bento-layout">
-                <li id="bento-1" class="bento-item">
+                <li id="bento-1" class="bento-item large">
                     <h3>Skill 1</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-2" class="bento-item">
+                <li id="bento-2" class="bento-item small">
                     <h3>Skill 2</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-3" class="bento-item">
+                <li id="bento-3" class="bento-item large">
                     <h3>Skill 3</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-4" class="bento-item">
-                    <h3>Skill 3</h3>
+                <li id="bento-4" class="bento-item small">
+                    <h3>Skill 4</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-5" class="bento-item">
-                    <h3>Skill 3</h3>
+                <li id="bento-5" class="bento-item large">
+                    <h3>Skill 5</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-6" class="bento-item">
-                    <h3>Skill 3</h3>
+                <li id="bento-6" class="bento-item small">
+                    <h3>Skill 6</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-7" class="bento-item">
-                    <h3>Skill 3</h3>
+                <li id="bento-7" class="bento-item large">
+                    <h3>Skill 7</h3>
                     <p>Description</p>
                 </li>
-                <li id="bento-8" class="bento-item">
-                    <h3>Skill 3</h3>
+                <li id="bento-8" class="bento-item small">
+                    <h3>Skill 8</h3>
                     <p>Description</p>
                 </li>
             </ul>
@@ -94,16 +93,20 @@
                 <form>
                     <h2>Contact Me</h2>
                     <div id="form-inner">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Send</button>
+                        <div>
+                            <label for="name">Name:</label>
+                            <input placeholder="Your Name" type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input placeholder="youremail@gmail.com" tipy="email" id="email" name="email" required>
+                        </div>
+                        <label  for="message">Message:</label>
+                        <textarea placeholder="Let me know how I can help You! " rows="10" id="message" name="message"
+                            required></textarea>
+                        <button type="submit">
+                            Send ↗️
+                        </button>
                     </div>
                 </form>
             </div>
@@ -111,17 +114,22 @@
     </main>
 
     <footer>
-        <h2> 2024 &copy; Jason Steven <a href="mailto:jasondevgm@gmail.com"> 📧 </a></h2>
+        <h2>2024 &copy; Jason Steven
+            <a href="mailto:jasondevgm@gmail.com"><img class="arrow" src="images/icons/arrow.svg" alt="arrow"></a>
+        </h2>
         <ul>
             <li>
-
+                <a href="https://www.linkedin.com/in/jason-steven-gamba-manzano-03574733b/" target="_blank">
+                    <img src="images/icons/github.svg" alt="GitHub">
+                </a>
             </li>
             <li>
-
+                <a href="https://github.com/jasondevgm" target="_blank">
+                    <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                </a>
             </li>
         </ul>
     </footer>
     <script src="main.js"></script>
 </body>
-
 </html>
