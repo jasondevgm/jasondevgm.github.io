@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason Steven Portfolio</title>
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 
 <body>
+    <!-- Background video -->
     <video autoplay muted loop id="background-video">
         <source src="videos/main_background.mp4" type="video/mp4">
     </video>
+
+    <!-- Header with navigation -->
     <header>
         <nav>
             <ul id="nav-btns" class="border-animation">
@@ -39,80 +43,93 @@
         </nav>
     </header>
 
+    <!-- Main content -->
     <main>
+        <!-- About section -->
         <section id="about">
             <h1>Hi! I'm Jason Steven,<span><br id="rol-txt">a Full Stack Developer <br></span> by the way I live in
                 Barcelona.</h1>
             <a id="touch-btn" class="border-animation" href="#contact">Let's get in touch <img class="arrow"
                     src="images/icons/arrow.svg" alt="arrow"></a>
         </section>
+
+        <!-- Projects section -->
         <section id="projects">
             <h2>Some projects I've worked on</h2>
             <div id="projects-container">
+                <!-- Projects will be dynamically added here -->
             </div>
         </section>
+
+        <!-- Skills section -->
         <section id="skills">
             <h2>Skills</h2>
-            <ul class="bento-layout">
-                <li id="bento-1" class="bento-item large">
-                    <h3>Skill 1</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-2" class="bento-item small">
-                    <h3>Skill 2</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-3" class="bento-item large">
-                    <h3>Skill 3</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-4" class="bento-item small">
-                    <h3>Skill 4</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-5" class="bento-item large">
-                    <h3>Skill 5</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-6" class="bento-item small">
-                    <h3>Skill 6</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-7" class="bento-item large">
-                    <h3>Skill 7</h3>
-                    <p>Description</p>
-                </li>
-                <li id="bento-8" class="bento-item small">
-                    <h3>Skill 8</h3>
-                    <p>Description</p>
-                </li>
-            </ul>
-        </section>
-        <section id="contact">
-            <div>
-                <form>
-                    <h2>Contact Me</h2>
-                    <div id="form-inner">
-                        <div>
-                            <label for="name">Name:</label>
-                            <input placeholder="Your Name" type="text" id="name" name="name" required>
-                        </div>
-                        <div>
-                            <label for="email">Email:</label>
-                            <input placeholder="youremail@gmail.com" tipy="email" id="email" name="email" required>
-                        </div>
-                        <label  for="message">Message:</label>
-                        <textarea placeholder="Let me know how I can help You! " rows="10" id="message" name="message"
-                            required></textarea>
-                        <button type="submit">
-                            Send ↗️
+            <div class="skills-container">
+                <!-- Image and Experience -->
+                <div class="skills-experience">
+                    <div>
+                        <img id="skills-experience-image" alt="Person working on a computer"
+                            src="images/gifs/programmer.webp" />
+                        <h2 id="skills-experience-text">
+                            ≈ 5 years of self learning.
+                        </h2>
+                    </div>
+                </div>
+                <!-- Project Invitation -->
+                <div id="invitation">
+                    <h2 id="invitation-text">
+                        Do you want to start a project together?
+                    </h2>
+                    <button id="invitation-button" onclick="copyEmailToClipboard()">
+                        Copy my email address
+                    </button>
+                </div>
+                <!-- Learning Atro -->
+                <div id="skill-learning">
+                    <div>
+                        <img alt="Working on...." class="" src="images/icons/astro.svg" />
+                        <h2 class="">
+                            Currently learning Astro
+                        </h2>
+                        <button class="">
+                            My work
                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <h2>Ready to give your project a twist?</h2>
+            <div class="contact-background">
+                <form>
+                    <div id="form-inner" class="contact-background">
+                        <div id="contact-row">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input placeholder="Your Name" type="text" id="name" name="name" required>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input placeholder="youremail@gmail.com" tipy="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div id="contact-column">
+                            <label for="message">Message:</label>
+                            <textarea placeholder="Let me know how I can help You! " rows="10" id="message"
+                                name="message" required></textarea>
+                            <button type="submit" class="border-animation">
+                                Send <img class="arrow" src="images/icons/arrow.svg" alt="arrow">
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <h2>2024 &copy; Jason Steven
             <a href="mailto:jasondevgm@gmail.com"><img class="arrow" src="images/icons/arrow.svg" alt="arrow"></a>
@@ -132,4 +149,5 @@
     </footer>
     <script src="main.js"></script>
 </body>
+
 </html>

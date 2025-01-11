@@ -1,6 +1,7 @@
 const lng_btn_es = document.getElementById("language-button-en");
 const lng_btn_en = document.getElementById("language-button-es");
 const lng_btn_cat = document.getElementById("language-button-cat");
+const invitation_button = document.getElementById("invitation-button");
 
 const btn_current_lang = document.getElementById("btn-curr-lang");
 
@@ -25,7 +26,20 @@ if (/^es*$/.test(selected_language)) {
   updateLanguage();
 }
 
-const essentialSkills = ["JavaScript", "HTML", "CSS", "React", "Node.js", "TypeScript", "Express", "MongoDB", "Docker", "Kubernetes", "AWS", "Webpack"];
+const essentialSkills = [
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "React",
+  "Node.js",
+  "TypeScript",
+  "Express",
+  "MongoDB",
+  "Docker",
+  "Kubernetes",
+  "AWS",
+  "Webpack"
+];
 
 function changeLanguage(language) {
   document.cookie = language;
@@ -69,10 +83,10 @@ async function fetchGitHubProjects() {
   projects.slice(1).forEach(async project => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
-    const contentsResponse = await fetch(
+    const contentResponse = await fetch(
       `https://api.github.com/repos/jasondevgm/${project.name}/contents`
     );
-    const contents = await contentsResponse.json();
+    const contents = await contentResponse.json();
     const gifFile = contents.find(file => file.name.endsWith(".gif"));
 
     projectElement.innerHTML = `
@@ -87,40 +101,60 @@ async function fetchGitHubProjects() {
   });
 }
 
+function copyEmailToClipboard() {
+    const email = "jasondevgm@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+        invitation_button.innerText = "Copied!";
+    }).catch(err => {
+        console.error("Failed to copy email: ", err);
+    });
+}
+
 const css = `
     .project {
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      transition: transform 0.2s;
+      backdrop-filter: blur(5px);
+      background: url("./images/gifs/triangle-dimension.webp");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      border: 1px solid #ddd;
+      margin: 10px;
+      border-radius: 15px;
     }
 
     .project a {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+      backdrop-filter: blur(3px);
+      display: flex;
+      cursor: pointer;
+      border-radius: 15px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .project h3 {
-        margin: 0 0 10px;
-        font-size: 2rem;
+      padding: 50px;
+      font-size: 2rem;
     }
-    .project p {
-        margin: 0 0 10px;
-        color: #555;
-    }
+
     .project img {
-        width: 100%;
-        height: 100%
-        height: auto;
-        display: block;
-        margin-top: 10px;
+      width: 100%;
+      border-radius: 0px 15px 15px 0px;
+      margin: 0;
+      right: 0;
+      display: block;
+      height: 100%;
     }
+
+    .project:hover {
+      transform: scale(1.05);
+}
 `;
 
 const style = document.createElement("style");
 style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
 
-//fetchGitHubProjects();
+fetchGitHubProjects();

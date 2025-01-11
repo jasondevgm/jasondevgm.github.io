@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
     --background-color: #dae0e6;
     --text-color: #000000;
@@ -16,12 +17,12 @@
     --card-border-color: #e1e4e8;
 }
 
+/* Background Video */
 #background-video {
     filter: grayscale(30%) hue-rotate(255deg) brightness(0.4);
     position: fixed;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     right: 0;
     bottom: 0;
@@ -33,6 +34,7 @@
     overflow: hidden;
 }
 
+/* Body */
 body {
     margin: 0;
     padding: 0;
@@ -47,6 +49,7 @@ body {
     user-select: none;
 }
 
+/* Headings */
 h1 {
     font-size: 3rem;
 }
@@ -55,21 +58,25 @@ h2 {
     font-size: 2rem;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: var(--footer-text-color);
 }
 
+/* Paragraphs */
 p {
     font-size: 1rem;
 }
 
+/* Header */
 header {
     position: absolute;
     z-index: 1;
     width: 100%;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -103,22 +110,23 @@ nav {
     transform: scale(1.10);
 }
 
+/* Language Selector */
 .tab-container {
     position: absolute;
-    right: 90PX;
+    right: 90px;
 }
 
-.tab-button{
+.tab-button {
     position: relative;
     display: inline-block;
 }
 
-.tab-button img{
+.tab-button img {
     padding: 6px;
     width: 40px;
 }
 
-.tab-container:hover .tab-languages{
+.tab-container:hover .tab-languages {
     display: block;
     z-index: 1;
 }
@@ -146,6 +154,7 @@ nav {
     width: 30px;
 }
 
+/* Main Content */
 main {
     display: flex;
     flex-direction: column;
@@ -154,11 +163,13 @@ main {
     backdrop-filter: blur(4px);
 }
 
+/* Sections */
 section {
     margin-top: 20px;
-
+    width: 80%;
 }
 
+/* Buttons */
 .projects-btn {
     padding-left: 40px !important;
 }
@@ -167,7 +178,7 @@ section {
     padding-right: 40px !important;
 }
 
-
+/* Media Queries */
 @media screen and (max-width: 450px) {
     nav ul {
         display: flex;
@@ -195,6 +206,7 @@ section {
     }
 }
 
+/* About Section */
 #about {
     display: flex;
     flex-direction: column;
@@ -215,6 +227,7 @@ section {
     font-weight: 900;
 }
 
+/* Touch Button */
 #touch-btn {
     padding: 10px 30px;
     transition: transform 0.2s;
@@ -224,19 +237,13 @@ section {
     transform: scale(1.05);
 }
 
+/* Arrow Icon */
 .arrow {
     height: 20px;
     filter: invert(99%) sepia(7%) saturate(202%) hue-rotate(208deg) brightness(115%) contrast(100%);
 }
 
-#projects {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
+/* Projects Container */
 #projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -245,83 +252,153 @@ section {
     width: 100%;
 }
 
-.project {
+
+
+/* Skills section */
+
+
+#skills{
     display: flex;
-    backdrop-filter: blur(20px);
-    width: 80%;
-    cursor: pointer;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin: 16px 0;
-    transition: transform 0.2s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-.project img {
-    width: 100px;
-    border-radius: 8px;
-}
-
-.project a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project a:hover {
-    color: var(--link-hover-color);
-}
-
-#skills {
-    display: flex;
-    min-height: 100vh;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-
-#skills ul {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
     width: 80%;
-    flex-wrap: wrap;
-    gap: 16px;
 }
 
-#skills li {
-    backdrop-filter: blur(20px);
-    border-radius: 8px;
-    list-style: none;
-    cursor: crosshair;
-    transition: transform 0.2s;
+/* Skills ontainer */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    gap: 1rem;
+    transition: 0.2s;
 }
 
-#skills li:hover {
-    transform: scale(1.05);
+/* Skills Experience */
+.skills-experience {
+    display: flex;
+    background: url(images/gifs/tv-interference.webp);
+    background-size: cover;
+    color: #000000;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1 / 3;
+    border-radius: 20px;
 }
 
-.bento-item {
-    border: 1px solid var(--card-border-color);
-    border-radius: 8px;
-    padding: 16px;
+.skills-experience div{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.8;
+    background-color: white;
+    border-radius: 20px;
 }
 
-.bento-item.large {
-    flex: 2 1 60%;
+.skills-experience img{
+    border-radius: 20px;
 }
 
-.bento-item.small {
-    flex: 1 1 30%;
+.skills-experience h3{
+    margin: 0;
+    border-radius: 20px;
+    font-size: 2rem;
+    padding-bottom: 10px;
 }
 
+
+/* Invitation Section */
+#invitation {
+    display: flex;
+    flex-direction: column;
+    filter:invert();
+    padding: 30px;
+    border-radius: 15px;
+    align-items: center;
+    background: url(images/gifs/noise1.webp);
+    background-size: cover;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#invitation-text {
+    margin: 0;
+}
+
+#invitation-button {
+    color: #fff;
+    padding: 15px 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #221c74;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(122, 122, 122, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(75, 75, 75, 0) 100%);
+    box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Skill Learning */
+#skill-learning {
+    background: url(images/gifs/space-travel.webp);
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#skill-learning div {
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+}
+
+#skill-learning img {
+    height: 100px;
+    filter: invert();
+}
+
+#skill-learning button {
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 10px;
+    border-width: 0 0 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateZ(0);
+    width: 50%;
+}
+
+#skill-learning button:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#skill-learning button:active {
+    border-width: 4px 0 0;
+    background: none;
+}
+
+/* Media Queries for Projects */
 @media (min-width: 600px) {
     .project {
         display: flex;
@@ -334,25 +411,23 @@ section {
     }
 }
 
-#contact {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact div {
+/* Contact Background */
+.contact-background {
     background: url(images/gifs/star-rain.webp) no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 2px;
-    min-width: 100%;
-
 }
 
-#contact div form {
-    border-radius: 20px;
+/* Contact Form */
+
+#contact {
+    width: 60%;
+}
+
+#contact form {
+    border-radius: 30px;
     display: flex;
     backdrop-filter: blur(50px);
     padding: 40px 40px;
@@ -361,46 +436,55 @@ section {
     font-weight: 700;
 }
 
-#contact div form h2{
-    margin-top: 0;
-}
-
 #form-inner {
     display: flex;
-    flex-wrap: wrap;border-radius: 20px;
-    align-items: center;
-    border-radius: 20px;
-    font-size: 1.3rem;
-    font-weight: 700;
+    flex-direction: column;
+    padding: 25px;
+    flex-wrap: wrap;
 }
 
-#form-inner div {
+#contact-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact-row div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
     align-items: center;
 }
 
-#contact form div label{
-    margin: 12px 34px;
+#contact-column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#contact label {
+    align-self: flex-start;
+    padding: 12px 0px;
+    margin-right: 20px;
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
 }
 
-#contact form div input{
-    padding: 20px;
-    margin: 10px 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    width: 100%;
+#contact input {
+    padding: 12px;
+    width: 90%;
+    align-self: flex-start;
     color: white;
     background-color: #130f25;
     border: 1px solid #ffffff;
     border-radius: 10px;
 }
-#contact form div textarea {
-    padding: 10px 20px;
-    margin: 10px 10px;
+
+#contact textarea {
+    padding: 12px;
     font-size: 1rem;
     font-weight: 600;
     width: 100%;
@@ -411,15 +495,11 @@ section {
 }
 
 #contact button {
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
     font-size: 1.5rem;
     width: 100%;
-    margin: 10px 10px;
+    margin-top: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
 }
 
 #contact button:hover {
@@ -427,6 +507,7 @@ section {
     background-color: var(--button-hover-background-color);
 }
 
+/* Footer */
 footer {
     font-weight: 700;
     padding: 1rem;
@@ -438,7 +519,7 @@ footer {
     color: white;
 }
 
-footer h2{
+footer h2 {
     font-size: 1.5rem;
 }
 
@@ -455,6 +536,7 @@ footer ul li a img {
     height: 50px;
 }
 
+/* Border Animation */
 @property --bg-angle {
     inherits: false;
     initial-value: 0deg;
@@ -468,9 +550,9 @@ footer ul li a img {
 }
 
 .border-animation {
-    animation: 2s linear 0s infinite normal none running spin;
+    animation: 4s linear 0s infinite normal none running spin;
     background: linear-gradient(to bottom, oklch(0 0.2 240 / 2), oklch(0 0.2 240 / 2)) padding-box,
-        conic-gradient(from var(--bg-angle) in oklch longer hue, oklch(0.85 0.37 0) 0 0) border-box;
+        conic-gradient(from var(--bg-angle), oklch(0.85 0.37 0), oklch(0.1 0.2 240)) border-box;
     box-shadow: oklch(0.1 0.37 315 / 0.25) 0.1rem 0.2rem 0.2rem 0.2rem;
     color: white;
     text-align: center;

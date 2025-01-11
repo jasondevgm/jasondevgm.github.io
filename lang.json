@@ -4,12 +4,12 @@
         "skl-txt": "Habilidades",
         "cont-txt": "Contacto",
         "rol-txt": "un Desarrollador Full Stack",
-        "touch-btn": "Pongámonos en contacto",
+        "touch-btn": "Contácteme",
         "projects-title": "Algunos proyectos en los que he trabajado",
         "skills-title": "Habilidades",
         "contact-title": "Contáctame",
         "form-name": "Nombre:",
-        "form-email": "Correo electrónico:",
+        "form-email": "Correo: ",
         "form-message": "Mensaje:",
         "form-button": "Enviar ↗️"
     },
@@ -37,7 +37,7 @@
         "skills-title": "Habilitats",
         "contact-title": "Contacta'm",
         "form-name": "Nom:",
-        "form-email": "Correu electrònic:",
+        "form-email": "Correu: ",
         "form-message": "Missatge:",
         "form-button": "Enviar ↗️"
     }
