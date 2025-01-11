@@ -80,7 +80,7 @@ async function fetchGitHubProjects() {
 
   const projectsContainer = document.getElementById("projects-container");
 
-  projects.slice(2).forEach(async project => {
+  projects.forEach(async project => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
     const contentResponse = await fetch(
