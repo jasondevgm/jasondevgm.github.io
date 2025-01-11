@@ -26,21 +26,6 @@ if (/^es*$/.test(selected_language)) {
   updateLanguage();
 }
 
-const essentialSkills = [
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "React",
-  "Node.js",
-  "TypeScript",
-  "Express",
-  "MongoDB",
-  "Docker",
-  "Kubernetes",
-  "AWS",
-  "Webpack"
-];
-
 function changeLanguage(language) {
   document.cookie = language;
   window.location.reload();
