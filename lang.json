@@ -11,7 +11,12 @@
         "form-name": "Nombre:",
         "form-email": "Correo: ",
         "form-message": "Mensaje:",
-        "form-button": "Enviar ↗️"
+        "form-button": "Enviar ↗️",
+        "about-title": "¡Hola! Soy Jason Steven,<span><br id=\"rol-txt\">Desarrollador Full Stack <br></span> por cierto, vivo en Barcelona.",
+        "invitation-text": "¿Quieres empezar un proyecto juntos?",
+        "invitation-button": "Copiar mi dirección de correo electrónico",
+        "skill-learning": "Actualmente aprendiendo Astro",
+        "skill-learning-button": "Mi trabajo"
     },
     "en": {
         "pro-txt": "Projects",
@@ -25,7 +30,12 @@
         "form-name": "Name:",
         "form-email": "Email:",
         "form-message": "Message:",
-        "form-button": "Send ↗️"
+        "form-button": "Send ↗️",
+        "about-title": "Hi! I'm Jason Steven,<span><br id=\"rol-txt\">a Full Stack Developer <br></span> by the way I live in Barcelona.",
+        "invitation-text": "Do you want to start a project together?",
+        "invitation-button": "Copy my email address",
+        "skill-learning": "Currently learning Astro",
+        "skill-learning-button": "My work"
     },
     "cat": {
         "pro-txt": "Projectes",
@@ -39,6 +49,11 @@
         "form-name": "Nom:",
         "form-email": "Correu: ",
         "form-message": "Missatge:",
-        "form-button": "Enviar ↗️"
+        "form-button": "Enviar ↗️",
+        "about-title": "Hola! Sóc Jason Steven,<span><br id=\"rol-txt\">Desenvolupador Full Stack <br></span> per cert, visc a Barcelona.",
+        "invitation-text": "Vols començar un projecte junts?",
+        "invitation-button": "Copia la meva adreça de correu electrònic",
+        "skill-learning": "Actualment aprenent Astro",
+        "skill-learning-button": "El meu treball"
     }
 }

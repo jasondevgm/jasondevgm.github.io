@@ -55,6 +55,13 @@ async function updateLanguage() {
         lang["form-message"];
       document.querySelector("#form-inner button").textContent =
         lang["form-button"];
+      document.querySelector("#about h1").innerHTML = lang["about-title"];
+      document.querySelector("#invitation-text").textContent = lang["invitation-text"];
+      document.querySelector("#invitation-button").textContent = lang["invitation-button"];
+      document.querySelector("#skill-learning h2").textContent = lang["skill-learning"];
+      document.querySelector("#skill-learning button").textContent = lang["skill-learning-button"];
+      document.querySelector("#contact h2").textContent = lang["contact-title"];
+      document.querySelector("footer h2").innerHTML = lang["footer-text"];
     })
     .catch(error => console.error("Error:", error));
 }
