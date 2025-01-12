@@ -57,7 +57,6 @@ async function updateLanguage() {
       document.querySelector("#invitation-button").textContent = lang["invitation-button"];
       document.querySelector("#skill-learning h2").textContent = lang["skill-learning"];
       document.querySelector("#skill-learning button").textContent = lang["skill-learning-button"];
-      document.querySelector("#contact h2").textContent = lang["contact-title"];
     })
     .catch(error => console.error("Error:", error));
 }
