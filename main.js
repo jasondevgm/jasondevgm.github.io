@@ -76,7 +76,7 @@ async function fetchGitHubProjects() {
 
     projectElement.innerHTML = `
             <a href="${project.html_url}" target="_blank">
-            <h3>${project.name}</h3>
+            <h2>${project.name}</h2>
             ${gifFile
               ? `<img src="${gifFile.download_url}" alt="${project.name} gif">`
               : ""}
@@ -97,9 +97,8 @@ function copyEmailToClipboard() {
 
 const css = `
     .project {
-      width: 80%;
+      width: 90%;
       transition: transform 0.2s;
-      backdrop-filter: blur(5px);
       background: url("./images/gifs/triangle-dimension.webp");
       background-attachment: fixed;
       background-position: center;
@@ -119,16 +118,17 @@ const css = `
       align-items: center;
     }
 
-    .project h3 {
+    .project h2 {
       padding: 50px;
       font-size: 2rem;
+      color: white;
     }
 
     .project img {
       width: 100%;
       border-radius: 0px 15px 15px 0px;
       margin: 0;
-      right: 0;
+      right: 0px;
       display: block;
       height: 100%;
     }
