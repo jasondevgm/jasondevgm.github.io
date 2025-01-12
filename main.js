@@ -95,6 +95,20 @@ function copyEmailToClipboard() {
   });
 }
 
+// Send email to dev
+document.querySelector('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  const mailtoLink = `mailto:jasondevgm@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+  window.location.href = mailtoLink;
+  
+  document.getElementById('form-status').innerText = 'Message sent!';
+});
+
 // CSS styles
 const css = `
   .project {
