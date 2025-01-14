@@ -103,10 +103,10 @@ document.querySelector('form').addEventListener('submit', function (e) {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
   
-  const mailtoLink = `mailto:jasondevgm@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+  const mailtoLink = `mailto:jasondevgm@gmail.com?subject=Mensaje de ${name}&body=Nombre: ${name}%0D%0AEmail: ${email}%0D%0AMensaje: ${message}`;
   window.location.href = mailtoLink;
   
-  document.getElementById('form-status').innerText = 'Message sent!';
+  document.getElementById('send-button').innerText = 'Message sent!';
 });
 
 // CSS styles
