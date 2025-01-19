@@ -8,6 +8,32 @@
     <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <meta name="description" content="Jason Steven's portfolio showcasing projects, skills, and contact information.">
+    <meta name="keywords" content="Jason Steven, Full Stack Developer, Portfolio, Projects, Skills, Contact">
+    <meta name="author" content="Jason Steven">
+    <meta property="og:title" content="Jason Steven Portfolio">
+    <meta property="og:description" content="Jason Steven's portfolio showcasing projects, skills, and contact information.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.jasonstevenportfolio.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jason Steven Portfolio">
+    <meta name="twitter:description" content="Jason Steven's portfolio showcasing projects, skills, and contact information.">
+    <meta name="twitter:image" content="images/twitter-image.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jason Steven",
+      "jobTitle": "Full Stack Developer",
+      "url": "https://www.jasonstevenportfolio.com",
+      "sameAs": [
+        "https://github.com/jasondevgm",
+        "https://www.linkedin.com/in/jason-steven-gamba-manzano-03574733b/"
+      ],
+      "image": "images/profile.jpg",
+      "description": "Jason Steven's portfolio showcasing projects, skills, and contact information."
+    }
+    </script>
 </head>
 
 <body>
@@ -26,17 +52,17 @@
             </ul>
             <div id="tab-container">
                 <div class="tab-button">
-                    <img id="btn-curr-lang" src="images/flags/en.webp" alt="lang">
+                    <img id="btn-curr-lang" src="images/flags/en.webp" alt="Current language flag">
                 </div>
                 <div class="tab-languages">
                     <button id="language-button-en" class="language-btn" onclick="changeLanguage('en')">
-                        <img class="language-img" src="images/flags/en.webp" alt="english-flag">
+                        <img class="language-img" src="images/flags/en.webp" alt="English flag">
                     </button>
                     <button id="language-button-es" class="language-btn" onclick="changeLanguage('es')">
-                        <img class="language-img" src="images/flags/es.webp" alt="spanish-flag">
+                        <img class="language-img" src="images/flags/es.webp" alt="Spanish flag">
                     </button>
                     <button id="language-button-cat" class="language-btn" onclick="changeLanguage('cat')">
-                        <img class="language-img" src="images/flags/cat.webp" alt="catalonian-flag">
+                        <img class="language-img" src="images/flags/cat.webp" alt="Catalonian flag">
                     </button>
                 </div>
             </div>
@@ -88,7 +114,7 @@
                 <!-- Learning Atro -->
                 <div id="skill-learning">
                     <div>
-                        <img alt="Working on...." src="images/icons/astro.svg" />
+                        <img alt="Working on Astro" src="images/icons/astro.svg" />
                         <h2 id="skill-learning-text">
                             Currently learning Astro
                         </h2>
@@ -120,17 +146,20 @@
                             <label for="message">Message:</label>
                             <textarea placeholder="Let me know how I can help You! " rows="10" id="message"
                                 name="message" required></textarea>
-                            <button id="send-button" type="submit" class="border-animation">Send<img class="arrow" src="images/icons/arrow.svg" alt="arrow">
+                            <button type="submit" class="border-animation">
+                                Send <img class="arrow" src="images/icons/arrow.svg" alt="arrow">
                             </button>
                         </div>
                     </div>
                 </form>
+                <div id="form-status"></div>
             </div>
         </section>
     </main>
     <!-- Footer -->
     <footer>
-        <h2 id="footer-text"> 2024 &copy; Jason Steven <a href="mailto:jasondevgm@gmail.com"><img class="arrow" src="images/icons/arrow.svg" alt="arrow"></a>
+        <h2 id="footer-text"> 2024 &copy; Jason Steven
+            <a href="mailto:jasondevgm@gmail.com"><img class="arrow" src="images/icons/arrow.svg" alt="arrow"></a>
         </h2>
         <ul>
             <li>

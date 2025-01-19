@@ -57,6 +57,7 @@ async function updateLanguage() {
       document.querySelector("#invitation-button").textContent = lang["invitation-button"];
       document.querySelector("#skill-learning h2").textContent = lang["skill-learning"];
       document.querySelector("#skill-learning button").textContent = lang["skill-learning-button"];
+      document.querySelector("#contact h2").textContent = lang["contact-title"];
     })
     .catch(error => console.error("Error:", error));
 }
@@ -102,10 +103,10 @@ document.querySelector('form').addEventListener('submit', function (e) {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
   
-  const mailtoLink = `mailto:jasondevgm@gmail.com?subject=Mensaje de ${name}&body=Nombre: ${name}%0D%0AEmail: ${email}%0D%0AMensaje: ${message}`;
+  const mailtoLink = `mailto:jasondevgm@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
   window.location.href = mailtoLink;
   
-  document.getElementById('send-button').innerText = 'Message sent!';
+  document.getElementById('form-status').innerText = 'Message sent!';
 });
 
 // CSS styles
