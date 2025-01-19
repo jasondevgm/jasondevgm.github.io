@@ -341,7 +341,6 @@ section {
     border-radius: 16px;
     border-width: 0 0 4px;
     bottom: -4px;
-    content: "";
     left: 0;
     position: absolute;
     right: 0;
@@ -745,7 +744,7 @@ footer ul li a img {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .to-top{
         display: none !important;
     }
