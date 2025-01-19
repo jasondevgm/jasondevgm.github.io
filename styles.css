@@ -1,9 +1,47 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-size: cover;
+    color: white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    font-size: 1rem;
+}
+
 /* Background Video */
 #background-video {
     filter: grayscale(30%) hue-rotate(255deg) brightness(0.4);
     position: fixed;
     background-attachment: fixed;
     background-position: center;
+    background-image: rgb(0, 0, 0); /* Fallback background image */
+    background-repeat: no-repeat;
     background-size: cover;
     right: 0;
     bottom: 0;
@@ -15,40 +53,6 @@
     overflow: hidden;
 }
 
-/* Body */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    background-size: cover;
-    color: white;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Headings */
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-/* Links */
-a {
-    text-decoration: none;
-}
-
-/* Paragraphs */
-p {
-    font-size: 1rem;
-}
-
 /* Header */
 header {
     position: absolute;
@@ -56,12 +60,10 @@ header {
     width: 100%;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
     margin: 50px;
 }
 
@@ -70,23 +72,23 @@ nav {
     align-items: center;
     flex-direction: row;
     list-style: none;
-    padding: 0px;
+    padding: 0;
     margin: 0 auto;
 }
 
+#nav-btns li {
+    padding: 22px 12px;
+    transition: transform 0.2s;
+}
+
 #nav-btns a {
-    display: flex;
-    text-decoration: none;
-    color: white;
     font-weight: 500;
     padding: 22px 12px;
     transition: transform 0.2s;
 }
 
-#nav-btns a:hover {
+#nav-btns li:hover {
     color: #dcdcdc;
-    text-align: center;
-    text-decoration: none;
     transform: scale(1.10);
 }
 
@@ -119,7 +121,7 @@ nav {
 
 .language-btn {
     background-color: transparent;
-    padding: 10px 10px;
+    padding: 10px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -204,7 +206,6 @@ section {
     width: 100%;
 }
 
-
 .project {
     display: flex;
     align-items: center;
@@ -214,15 +215,14 @@ section {
     max-width: 50%;
 }
 
-/* Skills section */
+/* Skills Section */
 #skills {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 75%;
 }
 
-/* Skills ontainer */
 .skills-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -230,7 +230,6 @@ section {
     transition: 0.2s;
 }
 
-/* Skills Experience */
 .skills-experience {
     display: flex;
     background: url(images/gifs/tv-interference.webp);
@@ -254,13 +253,6 @@ section {
 
 .skills-experience img {
     border-radius: 20px;
-}
-
-.skills-experience h3 {
-    margin: 0;
-    border-radius: 20px;
-    font-size: 2rem;
-    padding-bottom: 10px;
 }
 
 /* Invitation Section */
@@ -353,7 +345,6 @@ section {
     background: none;
 }
 
-
 /* Contact Background */
 .contact-background {
     background: url(images/gifs/star-rain.webp) no-repeat;
@@ -396,7 +387,6 @@ section {
     flex-direction: column;
     align-items: center;
     width: 48%;
-    align-items: center;
 }
 
 #contact-column {
@@ -408,32 +398,29 @@ section {
 
 #contact label {
     align-self: flex-start;
-    padding: 12px 0px;
+    padding: 12px 0;
     margin-right: 20px;
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
 }
 
-#contact input {
+#contact input, #contact textarea {
     padding: 12px;
-    width: 90%;
-    align-self: flex-start;
     color: white;
     background-color: #130f25;
     border: 1px solid white;
     border-radius: 10px;
 }
 
+#contact input {
+    width: 90%;
+}
+
 #contact textarea {
-    padding: 12px;
     font-size: 1rem;
     font-weight: 600;
     width: 100%;
-    color: white;
-    background-color: #130f25;
-    border: 1px solid white;
-    border-radius: 10px;
 }
 
 #contact button {
@@ -468,7 +455,6 @@ footer ul {
     list-style: none;
     width: 20%;
     display: flex;
-    flex-direction: r;
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
@@ -526,7 +512,6 @@ footer ul li a img {
     cursor: pointer;
 }
 
-
 /* Media Queries for Tablets */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     body {
@@ -551,6 +536,11 @@ footer ul li a img {
         width: 100%;
     }
 
+    #nav-btns li {
+        padding: 15px 12px;
+        transition: transform 0.2s;
+    }
+
     #nav-btns li a {
         text-decoration: none;
         color: white;
@@ -558,18 +548,18 @@ footer ul li a img {
         transition: transform 0.2s;
     }
 
-    /* Buttons */
+    #about {
+        margin-top: 110px;
+        font-size: 3rem;
+    }
 
     .project a {
-        display: flex;
         flex-direction: column;
-        color: white;
     }
 
     .project a img {
-        border-radius: 0px 0px 15px 15px;
+        border-radius: 0 0 15px 15px;
         max-width: 100%;
-        bottom: 0px;
     }
 
     .projects-btn {
@@ -596,20 +586,21 @@ footer ul li a img {
     .skills-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
+        width: 90%;
     }
 
     .skills-experience div {
-        display: flex;
+        height: 80px;
         width: 100%;
     }
 
     .skills-experience img {
-        width: 100%;
+        display: none;
     }
 
     #contact {
-        width: 90%;
+        width: 75%;
     }
 
     #contact-row div {
@@ -620,12 +611,11 @@ footer ul li a img {
         flex-direction: column;
     }
 
-    .to-top{
+    .to-top {
         display: none !important;
     }
 
     footer ul {
-        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
@@ -639,7 +629,6 @@ footer ul li a img {
     }
 
     header {
-        display: flex;
         flex-direction: column;
         justify-content: center;
     }
@@ -664,22 +653,23 @@ footer ul li a img {
         width: 90%;
     }
 
-    #nav-btns li a {
-        text-decoration: none;
-        font-weight: 500;
-        padding: 5px 0px;
+    #nav-btns li {
+        padding: 10px 12px;
         transition: transform 0.2s;
     }
 
-    /* Buttons */
+    #nav-btns li a {
+        padding: 5px 0;
+        transition: transform 0.2s;
+    }
+
     .projects-btn {
-        padding-left: 0px !important;
+        padding-left: 0 !important;
     }
 
     .contact-btn {
-        padding-right: 0px !important;
+        padding-right: 0 !important;
     }
-
 
     #tab-container {
         display: none;
@@ -699,20 +689,18 @@ footer ul li a img {
     }
 
     .project a {
-        display: flex;
         flex-direction: column;
-        color: white;
     }
 
     .project a img {
-        border-radius: 0px 0px 15px 15px;
-        bottom: 0px;
+        border-radius: 0 0 15px 15px;
         max-width: 100%;
     }
 
     .skills-container {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         width: 90%;
     }
 
@@ -745,13 +733,12 @@ footer ul li a img {
         text-align: center;
     }
 
-    .to-top{
+    .to-top {
         display: none !important;
     }
 
     footer ul {
         flex-direction: row;
-        display: flex;
         width: 100%;
         justify-content: space-evenly;
     }
