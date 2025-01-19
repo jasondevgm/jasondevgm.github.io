@@ -38,13 +38,13 @@
 
 <body>
     <!-- Background video -->
-    <video autoplay muted loop id="background-video">
+    <video autoplay muted loop id="background-video" aria-label="Background video of a cityscape">
         <source src="videos/main_background.mp4" type="video/mp4">
     </video>
 
     <!-- Header with navigation -->
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul id="nav-btns" class="border-animation">
                 <li><a id="pro-txt" class="projects-btn" href="#projects">Projects</a></li>
                 <li><a id="skl-txt" href="#skills">Skills</a></li>
@@ -54,14 +54,14 @@
                 <div class="tab-button">
                     <img id="btn-curr-lang" src="images/flags/en.webp" alt="Current language flag">
                 </div>
-                <div class="tab-languages">
-                    <button id="language-button-en" class="language-btn" onclick="changeLanguage('en')">
+                <div class="tab-languages" role="tablist" aria-label="Language selection">
+                    <button id="language-button-en" class="language-btn" onclick="changeLanguage('en')" role="tab" aria-selected="true">
                         <img class="language-img" src="images/flags/en.webp" alt="English flag">
                     </button>
-                    <button id="language-button-es" class="language-btn" onclick="changeLanguage('es')">
+                    <button id="language-button-es" class="language-btn" onclick="changeLanguage('es')" role="tab" aria-selected="false">
                         <img class="language-img" src="images/flags/es.webp" alt="Spanish flag">
                     </button>
-                    <button id="language-button-cat" class="language-btn" onclick="changeLanguage('cat')">
+                    <button id="language-button-cat" class="language-btn" onclick="changeLanguage('cat')" role="tab" aria-selected="false">
                         <img class="language-img" src="images/flags/cat.webp" alt="Catalonian flag">
                     </button>
                 </div>
@@ -72,7 +72,7 @@
     <!-- Main content -->
     <main>
         <!-- About section -->
-        <section id="about">
+        <section id="about" aria-labelledby="about-title">
             <h1 id="about-title">Hi! I'm Jason Steven,<span><br id="rol-txt">a Full Stack Developer <br></span> by the
                 way I live in
                 Barcelona.</h1>
@@ -81,16 +81,16 @@
         </section>
 
         <!-- Projects section -->
-        <section id="projects">
-            <h2>Some projects I've worked on</h2>
+        <section id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Some projects I've worked on</h2>
             <div id="projects-container">
                 <!-- Projects will be dynamically added here -->
             </div>
         </section>
 
         <!-- Skills section -->
-        <section id="skills">
-            <h2>Skills</h2>
+        <section id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
             <div class="skills-container">
                 <!-- Image and Experience -->
                 <div class="skills-experience">
@@ -127,10 +127,10 @@
         </section>
 
         <!-- Contact section -->
-        <section id="contact">
+        <section id="contact" aria-labelledby="contact-title">
             <h2 id="contact-title">Ready to give your project a twist?</h2>
             <div class="contact-background">
-                <form>
+                <form aria-labelledby="contact-title">
                     <div id="form-inner" class="contact-background">
                         <div id="contact-row">
                             <div>
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                 </form>
-                <div id="form-status"></div>
+                <div id="form-status" role="status"></div>
             </div>
         </section>
     </main>
