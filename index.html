@@ -156,6 +156,8 @@
             </div>
         </section>
     </main>
+    <!-- Floating button to navigate to top -->
+    <button class="to-top" id="to-top-button"  aria-label="Scroll to top" onclick="scrollToTop()" role="button"><span class="text">👆</span></button>
     <!-- Footer -->
     <footer>
         <h2 id="footer-text"> 2024 &copy; Jason Steven
@@ -175,6 +177,22 @@
         </ul>
     </footer>
     <script src="main.js"></script>
+    <script>
+        // Function to scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', () => {
+            const toTopButton = document.getElementById('to-top-button');
+            if (window.scrollY > 300) {
+                toTopButton.style.display = 'block';
+            } else {
+                toTopButton.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
