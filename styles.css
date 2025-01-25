@@ -155,6 +155,10 @@ section {
     width: 80%;
 }
 
+section h2 {
+    margin-bottom: 30px;
+}
+
 /* Buttons */
 .projects-btn {
     padding-left: 40px !important;
@@ -560,7 +564,7 @@ footer ul li a img {
 
     #about {
         margin-top: 110px;
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .project a {
