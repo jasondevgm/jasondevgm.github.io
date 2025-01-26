@@ -143,7 +143,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
 // CSS styles
 const css = `
-  .project {
+.project {
     width: 90%;
     transition: transform 0.2s;
     background: url("./images/gifs/triangle-dimension.webp");
@@ -153,9 +153,9 @@ const css = `
     border: 1px solid #ddd;
     margin: 10px;
     border-radius: 15px;
-  }
+}
 
-  .project a {
+.project a {
     backdrop-filter: blur(3px);
     display: flex;
     cursor: pointer;
@@ -163,27 +163,27 @@ const css = `
     width: 100%;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .project h2 {
+.project h2 {
     padding: 50px;
     font-size: 2.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+}
 
-  .project img {
+.project img {
     width: 100%;
     border-radius: 0px 15px 15px 0px;
     margin: 0;
     right: 0px;
     display: block;
     height: 100%;
-  }
+}
 
-  .project:hover {
+.project:hover {
     transform: scale(1.05);
-  }
+}
 `;
 
 // Append styles to document head
@@ -192,4 +192,4 @@ style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
 
 // Fetch and display GitHub projects
-fetchGitHubProjects();
+//fetchGitHubProjects();

@@ -318,31 +318,42 @@ section h2 {
     filter: invert();
 }
 
-#skill-learning button {
+#skill-learning-button {
+    appearance: button;
     background-color: #1899D6;
     border: solid transparent;
-    border-radius: 10px;
+    border-radius: 16px;
     border-width: 0 0 4px;
-    color: white;
+    box-sizing: border-box;
+    color: #FFFFFF;
     cursor: pointer;
+    display: inline-block;
     font-size: 15px;
     font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
     outline: none;
     overflow: visible;
     padding: 13px 16px;
     text-align: center;
     text-transform: uppercase;
+    touch-action: manipulation;
     transform: translateZ(0);
-    width: 50%;
+    transition: filter .2s;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
 }
 
-#skill-learning button:after {
+#skill-learning-button:after {
     background-clip: padding-box;
     background-color: #1CB0F6;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
     bottom: -4px;
+    content: "";
     left: 0;
     position: absolute;
     right: 0;
@@ -350,10 +361,12 @@ section h2 {
     z-index: -1;
 }
 
-#skill-learning button:active {
+
+#skill-learning-button:active {
     border-width: 4px 0 0;
     background: none;
 }
+
 
 /* Contact Background */
 .contact-background {
