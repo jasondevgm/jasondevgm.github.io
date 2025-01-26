@@ -155,10 +155,6 @@ section {
     width: 80%;
 }
 
-section h2 {
-    margin-bottom: 30px;
-}
-
 /* Buttons */
 .projects-btn {
     padding-left: 40px !important;
@@ -185,7 +181,7 @@ section h2 {
 }
 
 #about span {
-    color: rgb(185, 210, 249);
+    color: rgb(139, 137, 216);
     font-weight: 900;
 }
 
@@ -450,7 +446,6 @@ footer {
     text-align: center;
     backdrop-filter: blur(2px);
     display: flex;
-    z-index: -2;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
@@ -458,7 +453,6 @@ footer {
 }
 
 footer::before {
-    z-index: -2;
     content: "";
     filter: blur(3px);
 }
@@ -520,7 +514,6 @@ footer ul li a img {
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     box-sizing: border-box;
     color: #FFFFFF;
-    z-index: 2;
     display: flex;
     font-size: 30px;
     justify-content: center;
@@ -567,7 +560,7 @@ footer ul li a img {
 
     #about {
         margin-top: 110px;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .project a {
