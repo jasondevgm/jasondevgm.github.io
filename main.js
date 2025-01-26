@@ -32,6 +32,38 @@ function changeLanguage(language) {
     window.location.reload();
 }
 
+let index = 0,
+    offset = 0,
+    forwards = true,
+    skipCount = 0,
+    skipDelay = 30,
+    speed = 65;
+
+function typeEffect(sentences) {
+    const rol_text = document.getElementById("rol-text");
+    setInterval(() => {
+        if (forwards) {
+            if (offset >= sentences[index].length) {
+                skipCount++;
+                if (skipCount === skipDelay) {
+                    forwards = false;
+                    skipCount = 0;
+                }
+            }
+        } else {
+            if (offset === 0) {
+                forwards = true;
+                index = (index + 1) % sentences.length;
+            }
+        }
+        const part = sentences[index].substr(0, offset);
+        if (skipCount === 0) {
+            offset += forwards ? 1 : -1;
+        }
+        rol_text.textContent = part;
+    }, speed);
+}
+
 // Update language content
 async function updateLanguage() {
     await fetch("lang.json")
@@ -41,8 +73,7 @@ async function updateLanguage() {
             document.getElementById("pro-txt").textContent = lang["pro-txt"];
             document.getElementById("skl-txt").textContent = lang["skl-txt"];
             document.getElementById("cont-txt").textContent = lang["cont-txt"];
-            document.getElementById("rol-txt").textContent = lang["rol-txt"];
-            document.getElementById("touch-btn").textContent = lang["touch-btn"];
+            document.getElementById("getInTouchBtn").textContent = lang["getInTouchBtn"];
             document.querySelector("#projects h2").textContent = lang["projects-title"];
             document.querySelector("#skills h2").textContent = lang["skills-title"];
             document.querySelector("#contact h2").textContent = lang["contact-title"];
@@ -56,6 +87,7 @@ async function updateLanguage() {
             document.querySelector("#skill-learning h2").textContent = lang["skill-learning"];
             document.querySelector("#skill-learning button").textContent = lang["skill-learning-button"];
             document.querySelector("#contact h2").textContent = lang["contact-title"];
+            typeEffect(lang["rol-sentences"]);
         })
         .catch(error => console.error("Error:", error));
 }
@@ -159,4 +191,4 @@ style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
 
 // Fetch and display GitHub projects
-// fetchGitHubProjects();
+fetchGitHubProjects();

@@ -17,7 +17,8 @@ body::before {
     filter: hue-rotate(264deg);
 }
 
-h1, h2 {
+h1,
+h2 {
     margin: 0;
 }
 
@@ -44,7 +45,8 @@ p {
     position: fixed;
     background-attachment: fixed;
     background-position: center;
-    background-image: rgb(0, 0, 0); /* Fallback background image */
+    background-image: rgb(0, 0, 0);
+    /* Fallback background image */
     background-repeat: no-repeat;
     background-size: cover;
     right: 0;
@@ -181,21 +183,21 @@ section h2 {
     color: white;
     padding-top: 100px;
     font-size: 4rem;
-    max-width: 80%;
+    max-width: 90%;
 }
 
-#about span {
-    color: rgb(185, 210, 249);
-    font-weight: 900;
+#rol-text {
+    color: rgb(135, 203, 255);
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
 /* Touch Button */
-#touch-btn {
+#getInTouchBtn {
     padding: 10px 30px;
     transition: transform 0.2s;
 }
 
-#touch-btn:hover {
+#getInTouchBtn:hover {
     transform: scale(1.05);
 }
 
@@ -413,7 +415,8 @@ section h2 {
     color: white;
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
     padding: 12px;
     color: white;
     background-color: #130f25;

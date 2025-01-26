@@ -67,10 +67,13 @@
     <main>
         <!-- About section -->
         <section id="about" aria-labelledby="about-title">
-            <h1 id="about-title">Hi! I'm Jason Steven,<span><br id="rol-txt">a Full Stack Developer <br></span> by the
-                way I live in
-                Barcelona.</h1>
-            <a id="touch-btn" class="border-animation" href="#contact">Let's get in touch <img class="arrow"
+            <h1 id="about-title">
+                <br>
+                <span id='rol-text'>
+                </span>
+                <br>
+            </h1>
+            <a id="getInTouchBtn" class="border-animation" href="#contact">Let's get in touch <img class="arrow"
                     src="images/icons/arrow.svg" alt="arrow"></a>
         </section>
 
@@ -129,11 +132,11 @@
                         <div id="contact-row">
                             <div>
                                 <label for="name">Name:</label>
-                                <input placeholder="Your Name" type="text" id="name" name="name" required>
+                                <input placeholder="Your Name" type="text" id="name" name="name" autocomplete="name" required>
                             </div>
                             <div>
                                 <label for="email">Email:</label>
-                                <input placeholder="youremail@gmail.com" type="email" id="email" name="email" required>
+                                <input placeholder="youremail@gmail.com" type="email" id="email" name="email" autocomplete="email" required>
                             </div>
                         </div>
                         <div id="contact-column">
