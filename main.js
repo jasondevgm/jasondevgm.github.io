@@ -192,4 +192,4 @@ style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
 
 // Fetch and display GitHub projects
-//fetchGitHubProjects();
+fetchGitHubProjects();

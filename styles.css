@@ -181,13 +181,13 @@ section h2 {
 
 #about h1 {
     color: white;
+    text-shadow: 3px 1px #222324, 2px 4px #222324, 3px 5px #222324;
     padding-top: 100px;
     font-size: 4rem;
     max-width: 90%;
 }
 
 #rol-text {
-    color: rgb(135, 203, 255);
     text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
