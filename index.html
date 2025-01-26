@@ -11,7 +11,8 @@
     <meta name="description" content="Jason Steven's portfolio showcasing projects, skills, and contact information.">
     <meta name="keywords" content="Jason Steven, Full Stack Developer, Portfolio, Projects, Skills, Contact">
     <meta name="author" content="Jason Steven">
-    <meta property="og:description" content="Jason Steven's portfolio showcasing projects, skills, and contact information.">
+    <meta property="og:description"
+        content="Jason Steven's portfolio showcasing projects, skills, and contact information.">
     <meta property="og:title" content="Jason Steven Portfolio">
     <meta property="og:image" content="https://www.jasonstevenportfolio.com/images/og-image.jpg">
     <meta property="og:url" content="https://www.jasonstevenportfolio.com/">
@@ -49,13 +50,16 @@
                     <img id="btn-curr-lang" src="images/flags/en.webp" alt="Current language flag">
                 </div>
                 <div class="tab-languages" role="tablist" aria-label="Language selection">
-                    <button id="language-button-en" class="language-btn" onclick="changeLanguage('en')" role="tab" aria-selected="true">
+                    <button id="language-button-en" class="language-btn" onclick="changeLanguage('en')" role="tab"
+                        aria-selected="true">
                         <img class="language-img" src="images/flags/en.webp" alt="English flag">
                     </button>
-                    <button id="language-button-es" class="language-btn" onclick="changeLanguage('es')" role="tab" aria-selected="false">
+                    <button id="language-button-es" class="language-btn" onclick="changeLanguage('es')" role="tab"
+                        aria-selected="false">
                         <img class="language-img" src="images/flags/es.webp" alt="Spanish flag">
                     </button>
-                    <button id="language-button-cat" class="language-btn" onclick="changeLanguage('cat')" role="tab" aria-selected="false">
+                    <button id="language-button-cat" class="language-btn" onclick="changeLanguage('cat')" role="tab"
+                        aria-selected="false">
                         <img class="language-img" src="images/flags/cat.webp" alt="Catalonian flag">
                     </button>
                 </div>
@@ -132,11 +136,13 @@
                         <div id="contact-row">
                             <div>
                                 <label for="name">Name:</label>
-                                <input placeholder="Your Name" type="text" id="name" name="name" autocomplete="name" required>
+                                <input placeholder="Your Name" type="text" id="name" name="name" autocomplete="name"
+                                    required>
                             </div>
                             <div>
                                 <label for="email">Email:</label>
-                                <input placeholder="youremail@gmail.com" type="email" id="email" name="email" autocomplete="email" required>
+                                <input placeholder="youremail@gmail.com" type="email" id="email" name="email"
+                                    autocomplete="email" required>
                             </div>
                         </div>
                         <div id="contact-column">
@@ -154,24 +160,27 @@
         </section>
     </main>
     <!-- Floating button to navigate to top -->
-    <button class="to-top" id="to-top-button"  aria-label="Scroll to top" onclick="scrollToTop()" role="button"><span class="text">👆</span></button>
+    <button class="to-top" id="to-top-button" aria-label="Scroll to top" onclick="scrollToTop()" role="button"><span
+            class="text">👆</span></button>
     <!-- Footer -->
     <footer>
-        <h2 id="footer-text"> 2024 &copy; Jason Steven
-            <a href="mailto:jasondevgm@gmail.com"><img class="arrow" src="images/icons/arrow.svg" alt="arrow"></a>
-        </h2>
-        <ul>
-            <li>
-                <a href="https://github.com/jasondevgm" target="_blank">
-                    <img src="images/icons/github.svg" alt="GitHub">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/jason-steven-gamba-manzano-03574733b/" target="_blank">
-                    <img src="images/icons/linkedin.svg" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
+        <div>
+            <h2 id="footer-text"> 2024 &copy; Jason Steven
+                <a href="mailto:jasondevgm@gmail.com"><img class="arrow" src="images/icons/arrow.svg" alt="arrow"></a>
+            </h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/jasondevgm" target="_blank">
+                        <img src="images/icons/github.svg" alt="GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jason-steven-gamba-manzano-03574733b/" target="_blank">
+                        <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
     <script src="main.js"></script>
     <script>
