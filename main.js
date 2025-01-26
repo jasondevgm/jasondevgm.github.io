@@ -167,8 +167,9 @@ const css = `
 
   .project h2 {
     padding: 50px;
-    font-size: 2rem;
-    color: white;
+    font-size: 2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .project img {
