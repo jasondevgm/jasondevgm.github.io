@@ -7,14 +7,27 @@ body {
 }
 
 body::before {
+    background: linear-gradient(-65deg, #131146, #090927, #08152d, #0e1130);
+	background-size: 200% 200%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url(images/gifs/background_img.webp);
-    background-size: cover;
-    filter: hue-rotate(264deg);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 h1,
@@ -256,6 +269,7 @@ section h2 {
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     opacity: 0.8;
     background-color: white;
     border-radius: 20px;
@@ -265,15 +279,43 @@ section h2 {
     border-radius: 20px;
 }
 
+
+#skills-experience-button {
+    margin-bottom: 30px;
+    align-items: center;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 3.5rem;
+    justify-content: center;
+    overflow: hidden;
+    transition: box-shadow .15s, transform .15s;
+    width: 80%;
+    font-size: 18px;
+}
+
+#skills-experience-button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+#skills-experience-button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 /* Invitation Section */
 #invitation {
     display: flex;
     flex-direction: column;
-    filter: invert();
     padding: 30px;
     border-radius: 15px;
     align-items: center;
-    background: url(images/gifs/noise1.webp);
+    background: url(images/gifs/star-rain.webp);
     background-size: cover;
     grid-column-start: 3;
     grid-column-end: 4;
@@ -304,18 +346,18 @@ section h2 {
     background-position: center;
     background-size: cover;
     grid-column-start: 3;
-    grid-column-end: 4;
+ 
 }
 
 #skill-learning div {
     padding: 30px;
     border-radius: 20px;
-    backdrop-filter: blur(3px);
+    height: 100%;
+    backdrop-filter: contrast(0.7);
 }
 
 #skill-learning img {
     height: 100px;
-    filter: invert();
 }
 
 #skill-learning-button {
@@ -370,7 +412,7 @@ section h2 {
 
 /* Contact Background */
 .contact-background {
-    background: url(images/gifs/star-rain.webp) no-repeat;
+    background: url(images/gifs/waves.webp) no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 30px;
@@ -472,6 +514,7 @@ footer {
     padding: 20px;
     color: white;
 }
+
 footer div {
     display: flex;
     justify-content: space-evenly;
@@ -629,13 +672,14 @@ footer ul li a img {
         width: 90%;
     }
 
-    .skills-experience div {
-        height: 80px;
-        width: 100%;
-    }
-
     .skills-experience img {
         display: none;
+    }
+
+    #skills-experience-button {
+        width: 75%;
+        margin-bottom: 10px;
+        padding: 15px;
     }
 
     #contact {

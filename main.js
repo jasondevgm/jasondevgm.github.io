@@ -80,7 +80,7 @@ async function updateLanguage() {
             document.querySelector("#form-inner label[for='name']").textContent = lang["form-name"];
             document.querySelector("#form-inner label[for='email']").textContent = lang["form-email"];
             document.querySelector("#form-inner label[for='message']").textContent = lang["form-message"];
-            document.querySelector("#form-inner button").textContent = lang["form-button"];
+            document.querySelector("#form-inner button").innerHTML = `${lang["form-button"]}  <img class='arrow' src='images/icons/arrow.svg' alt='arrow'></img>`;
             document.querySelector("#about h1").innerHTML = lang["about-title"];
             document.querySelector("#invitation-text").textContent = lang["invitation-text"];
             document.querySelector("#invitation-button").textContent = lang["invitation-button"];
