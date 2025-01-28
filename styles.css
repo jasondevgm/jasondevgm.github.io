@@ -7,8 +7,8 @@ body {
 }
 
 body::before {
-    background: linear-gradient(-65deg, #131146, #090927, #08152d, #0e1130);
-	background-size: 200% 200%;
+    background: linear-gradient(-65deg, #150f36, #1b1051, #0a1750, #020625);
+	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
     content: "";
@@ -361,7 +361,10 @@ section h2 {
 }
 
 #skill-learning-button {
-    appearance: button;
+
+    display: none;
+    /* display: inline-block; */
+
     background-color: #1899D6;
     border: solid transparent;
     border-radius: 16px;
@@ -369,7 +372,6 @@ section h2 {
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    display: inline-block;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: .8px;

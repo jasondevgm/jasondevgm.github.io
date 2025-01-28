@@ -75,7 +75,8 @@ async function updateLanguage() {
             document.getElementById("cont-txt").textContent = lang["cont-txt"];
             document.getElementById("getInTouchBtn").textContent = lang["getInTouchBtn"];
             document.querySelector("#projects h2").textContent = lang["projects-title"];
-            document.querySelector("#skills h2").textContent = lang["skills-title"];
+            document.querySelector("#skills-title").textContent = lang["skills-title"];
+            document.querySelector("#skills-experience-text").textContent = lang["skills-experience"];
             document.querySelector("#contact h2").textContent = lang["contact-title"];
             document.querySelector("#form-inner label[for='name']").textContent = lang["form-name"];
             document.querySelector("#form-inner label[for='email']").textContent = lang["form-email"];
