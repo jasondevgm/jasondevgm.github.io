@@ -8,9 +8,9 @@ body {
 
 body::before {
     background: linear-gradient(-65deg, #150f36, #1b1051, #0a1750, #020625);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
     content: "";
     position: fixed;
     width: 100%;
@@ -19,15 +19,17 @@ body::before {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 h1,
@@ -346,7 +348,7 @@ section h2 {
     background-position: center;
     background-size: cover;
     grid-column-start: 3;
- 
+
 }
 
 #skill-learning div {
@@ -414,11 +416,11 @@ section h2 {
 
 /* Contact Background */
 .contact-background {
-    background: url(images/gifs/waves.webp) no-repeat;
-    background-position: center;
-    background-size: cover;
     border-radius: 30px;
     padding: 2px;
+    background-color: #6f78ff;
+    opacity: 1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #6f78ff 10px), repeating-linear-gradient(#b6baff55, #b6baff);
 }
 
 /* Contact Form */
@@ -429,7 +431,7 @@ section h2 {
 #contact form {
     border-radius: 30px;
     display: flex;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(2px);
     padding: 40px 40px;
     flex-direction: column;
     font-size: 1.3rem;
