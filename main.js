@@ -1,11 +1,11 @@
-// Element selectors
+// Element selectors.
 const lng_btn_es = document.getElementById("language-button-en");
 const lng_btn_en = document.getElementById("language-button-es");
 const lng_btn_cat = document.getElementById("language-button-cat");
 const invitation_button = document.getElementById("invitation-button");
 const btn_current_lang = document.getElementById("btn-curr-lang");
 
-// Image paths
+// Image paths.
 const en_img = "images/flags/en.webp";
 const es_img = "images/flags/es.webp";
 const cat_img = "images/flags/cat.webp";
@@ -14,7 +14,10 @@ const cat_img = "images/flags/cat.webp";
 let navigator_lang = navigator.language || navigator.userLanguage;
 let selected_language = document.cookie || navigator_lang;
 
-// Set initial flag based on selected language
+console.log(navigator_lang)
+console.log(selected_language)
+
+// Set initial flag based on selected language.
 if (/^es*$/.test(selected_language)) {
     btn_current_lang.src = es_img;
     updateLanguage();
@@ -26,7 +29,7 @@ if (/^es*$/.test(selected_language)) {
     updateLanguage();
 }
 
-// Change language and reload page
+// Change language and reload page.
 function changeLanguage(language) {
     document.cookie = language;
     window.location.reload();
@@ -77,6 +80,7 @@ async function updateLanguage() {
             document.querySelector("#projects h2").textContent = lang["projects-title"];
             document.querySelector("#skills-title").textContent = lang["skills-title"];
             document.querySelector("#skills-experience-text").textContent = lang["skills-experience"];
+            document.querySelector("#download-cv").textContent = lang["download-button"];
             document.querySelector("#contact h2").textContent = lang["contact-title"];
             document.querySelector("#form-inner label[for='name']").textContent = lang["form-name"];
             document.querySelector("#form-inner label[for='email']").textContent = lang["form-email"];
@@ -118,7 +122,24 @@ async function fetchGitHubProjects() {
     });
 }
 
-// Copy email to clipboard
+// Download CV based in the language browser.
+function downloadCV() {
+    let fileUrl = "";
+    if (/^es*$/.test(selected_language)) {
+        fileUrl = "files/Curriculum_es_JasonGamba.pdf";
+    } else if (/^cat*$/.test(selected_language)) {
+        fileUrl = "files/Curriculum_cat_JasonGamba.pdf";
+    } else if (/^en*$/.test(selected_language)) {
+        fileUrl = "files/Curriculum_en_JasonGamba.pdf";
+    }
+    if (fileUrl) {
+        window.open(fileUrl, "_blank");
+    } else {
+        console.error("No CV file available for the selected language.");
+    }
+}
+
+// Copy email to clipboard.
 function copyEmailToClipboard() {
     const email = "jasondevgm@gmail.com";
     navigator.clipboard.writeText(email).then(() => {
@@ -128,7 +149,7 @@ function copyEmailToClipboard() {
     });
 }
 
-// Send email to dev
+// Send email to jasondevgm@gmail.com.
 document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -143,12 +164,12 @@ document.querySelector('form').addEventListener('submit', function (e) {
 });
 
 
-// Function to scroll to top
+// Function to scroll to top.
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Show or hide the button based on scroll position
+// Show or hide the button based on scroll position.
 window.addEventListener('scroll', () => {
     const toTopButton = document.getElementById('to-top-button');
     if (window.scrollY > 300) {
@@ -158,7 +179,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// CSS styles
+// CSS styles.
 const css = `
 .project {
     width: 90%;
@@ -203,10 +224,10 @@ const css = `
 }
 `;
 
-// Append styles to document head
+// Append styles to document head.
 const style = document.createElement("style");
 style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
 
-// Fetch and display GitHub projects
-// fetchGitHubProjects();
+// Fetch and display GitHub projects.
+fetchGitHubProjects();

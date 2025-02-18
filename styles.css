@@ -7,7 +7,7 @@ body {
 }
 
 body::before {
-    background: linear-gradient(-65deg, #150f36, #1b1051, #0a1750, #020625);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(40, 2, 109) 100%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
@@ -181,6 +181,10 @@ section h2 {
     padding-left: 40px !important;
 }
 
+.skills-btn {
+    padding: 0px !important;
+}
+
 .contact-btn {
     padding-right: 40px !important;
 }
@@ -282,7 +286,7 @@ section h2 {
 }
 
 
-#skills-experience-button {
+.skills-experience-button {
     margin-bottom: 30px;
     align-items: center;
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
