@@ -142,6 +142,22 @@ document.querySelector('form').addEventListener('submit', function (e) {
     document.getElementById('form-status').innerText = 'Message sent!';
 });
 
+
+// Function to scroll to top
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', () => {
+    const toTopButton = document.getElementById('to-top-button');
+    if (window.scrollY > 300) {
+        toTopButton.style.display = 'block';
+    } else {
+        toTopButton.style.display = 'none';
+    }
+});
+
 // CSS styles
 const css = `
 .project {
@@ -193,4 +209,4 @@ style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
 
 // Fetch and display GitHub projects
-fetchGitHubProjects();
+// fetchGitHubProjects();
