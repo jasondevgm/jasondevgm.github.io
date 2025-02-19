@@ -24,7 +24,7 @@ if (/^es*$/.test(selected_language)) {
 } else if (/^cat*$/.test(selected_language)) {
     btn_current_lang.src = cat_img;
     updateLanguage();
-} else if (/^en*$/.test(selected_language)) {
+} else {
     btn_current_lang.src = en_img;
     updateLanguage();
 }
@@ -129,7 +129,7 @@ function downloadCV() {
         fileUrl = "files/Curriculum_es_JasonGamba.pdf";
     } else if (/^cat*$/.test(selected_language)) {
         fileUrl = "files/Curriculum_cat_JasonGamba.pdf";
-    } else if (/^en*$/.test(selected_language)) {
+    } else {
         fileUrl = "files/Curriculum_en_JasonGamba.pdf";
     }
     if (fileUrl) {
