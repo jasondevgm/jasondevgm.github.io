@@ -45,7 +45,8 @@ let index = 0,
 
 function typeEffect(sentences) {
     const rol_text = document.getElementById("rol-text");
-    setInterval(() => {
+    function type() {
+        
         if (forwards) {
             if (offset >= sentences[index].length) {
                 skipCount++;
@@ -65,7 +66,12 @@ function typeEffect(sentences) {
             offset += forwards ? 1 : -1;
         }
         rol_text.textContent = part;
-    }, speed);
+        setTimeout(() => {
+            requestAnimationFrame(type);
+        }, speed);
+    }
+
+    requestAnimationFrame(type);
 }
 
 // Update language content
