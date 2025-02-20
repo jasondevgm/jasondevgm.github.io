@@ -12,15 +12,18 @@ const cat_img = "images/flags/cat.webp";
 
 // Language detection
 let navigator_lang = navigator.language || navigator.userLanguage;
-let selected_language = document.cookie || navigator_lang || "en";
+let selected_language = (document.cookie || navigator_lang) || "en";
 
 
-// Set initial flag based on selected language.
+// Set initial flag based on selected language and update the language.
 if (/^es*$/.test(selected_language)) {
     btn_current_lang.src = es_img;
     updateLanguage();
 } else if (/^cat*$/.test(selected_language)) {
     btn_current_lang.src = cat_img;
+    updateLanguage();
+}else if (/^en*$/.test(selected_language)) {
+    btn_current_lang.src = en_img;
     updateLanguage();
 } else {
     btn_current_lang.src = en_img;
