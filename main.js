@@ -27,6 +27,7 @@ if (/^es*$/.test(selected_language)) {
     updateLanguage();
 } else {
     btn_current_lang.src = en_img;
+    selected_language = "en"
     updateLanguage();
 }
 
