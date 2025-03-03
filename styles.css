@@ -261,6 +261,7 @@ section h2 {
 
 .project img {
     max-width: 50%;
+    border-radius: 0 15px 15px 0;
 }
 
 .project {
