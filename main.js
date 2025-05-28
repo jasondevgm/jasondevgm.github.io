@@ -190,8 +190,6 @@ window.addEventListener('scroll', () => {
 // Fetch and display GitHub projects.
 fetchGitHubProjects();
 
-
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
     75,
@@ -199,7 +197,7 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
-camera.position.set(0, 2, 5);
+camera.position.set(0, 2, 4);
 camera.lookAt(0, 0, 0);
 
 const renderer = new THREE.WebGLRenderer({
@@ -210,19 +208,19 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 // Grid (wireframe brillante tipo neón)
-const size = 100;
-const divisions = 100;
-const gridHelper = new THREE.GridHelper(size, divisions, 0x00ffff, 0x00ffff);
+const size = 150;
+const divisions = 50;
+const gridHelper = new THREE.GridHelper(size, divisions, "#ffffff", "#ffffff");
 gridHelper.material.transparent = true;
 gridHelper.material.opacity = 0.15;
 scene.add(gridHelper);
 
 // Luz ambiente neón
-const ambientLight = new THREE.AmbientLight(0x00ffff, 0.8);
+const ambientLight = new THREE.AmbientLight(0.8);
 scene.add(ambientLight);
 
 // Luz direccional suave
-const dirLight = new THREE.DirectionalLight(0x00ffff, 0.3);
+const dirLight = new THREE.DirectionalLight(0.3);
 dirLight.position.set(0, 10, 10);
 scene.add(dirLight);
 
@@ -230,7 +228,7 @@ scene.add(dirLight);
 function animate() {
     requestAnimationFrame(animate);
 
-    gridHelper.position.z += 0.1;
+    gridHelper.position.z += 0.08;
     if (gridHelper.position.z > 10) {
         gridHelper.position.z = -10;
     }
