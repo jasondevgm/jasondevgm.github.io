@@ -22,7 +22,7 @@ if (/^es*$/.test(selected_language)) {
 } else if (/^cat*$/.test(selected_language)) {
     btn_current_lang.src = cat_img;
     updateLanguage();
-}else if (/^en*$/.test(selected_language)) {
+} else if (/^en*$/.test(selected_language)) {
     btn_current_lang.src = en_img;
     updateLanguage();
 } else {
@@ -47,7 +47,7 @@ let index = 0,
 function typeEffect(sentences) {
     const rol_text = document.getElementById("rol-text");
     function type() {
-        
+
         if (forwards) {
             if (offset >= sentences[index].length) {
                 skipCount++;
@@ -189,3 +189,59 @@ window.addEventListener('scroll', () => {
 
 // Fetch and display GitHub projects.
 fetchGitHubProjects();
+
+
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+camera.position.set(0, 2, 5);
+camera.lookAt(0, 0, 0);
+
+const renderer = new THREE.WebGLRenderer({
+    canvas: document.getElementById("bgCanvas"),
+    alpha: true,
+});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// Grid (wireframe brillante tipo neón)
+const size = 100;
+const divisions = 100;
+const gridHelper = new THREE.GridHelper(size, divisions, 0x00ffff, 0x00ffff);
+gridHelper.material.transparent = true;
+gridHelper.material.opacity = 0.15;
+scene.add(gridHelper);
+
+// Luz ambiente neón
+const ambientLight = new THREE.AmbientLight(0x00ffff, 0.8);
+scene.add(ambientLight);
+
+// Luz direccional suave
+const dirLight = new THREE.DirectionalLight(0x00ffff, 0.3);
+dirLight.position.set(0, 10, 10);
+scene.add(dirLight);
+
+// Simular movimiento hacia atrás: mover el grid
+function animate() {
+    requestAnimationFrame(animate);
+
+    gridHelper.position.z += 0.1;
+    if (gridHelper.position.z > 10) {
+        gridHelper.position.z = -10;
+    }
+
+    renderer.render(scene, camera);
+}
+animate();
+
+// Responsive
+window.addEventListener("resize", () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});

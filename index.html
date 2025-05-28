@@ -34,10 +34,12 @@
       "description": "Jason Steven's portfolio showcasing projects, skills, and contact information."
     }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 </head>
 
 <body>
     <!-- Header with navigation -->
+    <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
     <header>
         <nav aria-label="Main navigation">
             <ul id="nav-btns" class="border-animation">
@@ -102,16 +104,16 @@
                         </h2>
                         <button id="download-cv" class="skills-experience-button " onclick="downloadCV()">
                         </button>
-                        
+
                     </div>
                 </div>
                 <!-- Project Invitation -->
                 <div id="invitation">
                     <h2 id="invitation-text">
-                        
+
                     </h2>
                     <button id="invitation-button" onclick="copyEmailToClipboard()">
-                        
+
                     </button>
                 </div>
                 <!-- Learning Atro -->
